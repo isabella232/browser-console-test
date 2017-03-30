@@ -1,0 +1,9 @@
+*.py[co]
+
+# Test logs
+test/*
+!test/.placeholder
+*.log
+
+# Ignore overrides in configuration
+local_settings.py
