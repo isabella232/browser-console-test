@@ -10,7 +10,7 @@ Browser Console Test
 What is this?
 -------------
 
-`browser-console-test` is a repo that allows you to test webpages searching for
+`browser-console-test` Allows you to test webpages searching for
 javascript console logging.
 
 Assumptions
@@ -53,7 +53,7 @@ Running Tests
 
 At NPR, we recently had to update all of our past graphics to faciltate the site's switch to `https`. We have introduced test capabilities to trim down the review process for this project -- but this functionality can and probably should be a part of our regular deployment.
 
-Our basic test functionality uses [selenium for python](http://selenium-python.readthedocs.io/) and [chrome webdriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) to launch and validate the deployment url for a graphic or multiple graphics. The process makes a screenshot of the Chrome page and writes a log of the warnings, errors and ```console.log()``` statements that we may find.
+Our basic test functionality uses [selenium for python](http://selenium-python.readthedocs.io/) and [chrome webdriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) to launch and extract console logging from the browser. The process makes a screenshot of the Chrome page and writes a log of the warnings, errors and ```console.log()``` statements that we may find.
 
 * Selenium is included in our `requirements.txt`.
 
