@@ -69,8 +69,6 @@ There are other drivers ([see here](http://selenium-python.readthedocs.io/instal
 
 #### Test Deployment
 
-*Important:* _The testing functionality assumes that the graphic has already been deployed and its corresponding url is accessible._
-
 Once you have installed the needed binaries and libraries we are ready to start testing.
 
 The main entry point is a fabric task:
@@ -117,8 +115,8 @@ $ fab bulk_test:$CSVPATH,screenshot=False
 
 #### Naming result files for the tests
 
-We need to somehow identify each test on bulk tests and also for naming purposes in single tests. For that purpose we use `URL_ID_PATTERN` inside `app_config.py` which will be used as a RegExp pattern to extract an *id* from a given url. The default value can be used inside NPR for extracting a unique id from our CMS generated urls.
+We need to somehow identify each test on bulk tests and also for naming purposes in single tests. For that purpose we use `URL_ID_PATTERN` inside `app_config.py` which will be used as a RegExp pattern to extract an **identifier** from a given url. The default value can be used inside NPR for extracting a unique identifier from our CMS generated urls.
 
 You can override this behavior by changing the `URL_ID_PATTERN` directly on the `app_config.py` or if you do not want to change code for that configuration, you can create `local_settings.py` to override the behavior for a given test run. `local_settings.py` is ignored by git.
 
-If a pattern is not detected on the url for simple tests a formatted timestamp of the executed will be used to name the output files, for bulk tests the line number will be used for screenshot names.
+If a pattern is not detected on the url for simple tests a formatted timestamp of the execution will be used to name the output files, for bulk tests the line number will be used for screenshot filenames if needed.
